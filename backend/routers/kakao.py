@@ -54,6 +54,8 @@ def _format(rows: List[Dict[str, str]], keyword: str) -> str:
             lines.append(f"업종: {s['industry']}")
         if s.get("sub_industry"):
             lines.append(f"세부업종: {s['sub_industry']}")
+        if s.get("products"):
+            lines.append(f"주요제품: {s['products']}")
         if s.get("themes"):
             lines.append(f"관련테마: {str(s['themes']).replace('|', ' · ')}")
         return "\n".join(lines)
