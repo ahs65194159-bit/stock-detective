@@ -1,0 +1,212 @@
+[
+    {
+        "name": "삼성전자",
+        "code": "005930",
+        "market": "KOSPI",
+        "sector": "IT",
+        "industry": "반도체"
+    },
+    {
+        "name": "SK하이닉스",
+        "code": "000660",
+        "market": "KOSPI",
+        "sector": "IT",
+        "industry": "반도체"
+    },
+    {
+        "name": "LG에너지솔루션",
+        "code": "373220",
+        "market": "KOSPI",
+        "sector": "산업재",
+        "industry": "2차전지"
+    },
+    {
+        "name": "삼성바이오로직스",
+        "code": "207940",
+        "market": "KOSPI",
+        "sector": "헬스케어",
+        "industry": "바이오의약품"
+    },
+    {
+        "name": "현대차",
+        "code": "005380",
+        "market": "KOSPI",
+        "sector": "경기소비재",
+        "industry": "자동차"
+    },
+    {
+        "name": "기아",
+        "code": "000270",
+        "market": "KOSPI",
+        "sector": "경기소비재",
+        "industry": "자동차"
+    },
+    {
+        "name": "셀트리온",
+        "code": "068270",
+        "market": "KOSPI",
+        "sector": "헬스케어",
+        "industry": "바이오의약품"
+    },
+    {
+        "name": "NAVER",
+        "code": "035420",
+        "market": "KOSPI",
+        "sector": "커뮤니케이션서비스",
+        "industry": "인터넷 서비스"
+    },
+    {
+        "name": "카카오",
+        "code": "035720",
+        "market": "KOSPI",
+        "sector": "커뮤니케이션서비스",
+        "industry": "인터넷 서비스"
+    },
+    {
+        "name": "POSCO홀딩스",
+        "code": "005490",
+        "market": "KOSPI",
+        "sector": "소재",
+        "industry": "철강"
+    },
+    {
+        "name": "KB금융",
+        "code": "105560",
+        "market": "KOSPI",
+        "sector": "금융",
+        "industry": "은행"
+    },
+    {
+        "name": "신한지주",
+        "code": "055550",
+        "market": "KOSPI",
+        "sector": "금융",
+        "industry": "은행"
+    },
+    {
+        "name": "삼성SDI",
+        "code": "006400",
+        "market": "KOSPI",
+        "sector": "산업재",
+        "industry": "2차전지"
+    },
+    {
+        "name": "LG화학",
+        "code": "051910",
+        "market": "KOSPI",
+        "sector": "소재",
+        "industry": "화학"
+    },
+    {
+        "name": "현대모비스",
+        "code": "012330",
+        "market": "KOSPI",
+        "sector": "경기소비재",
+        "industry": "자동차부품"
+    },
+    {
+        "name": "삼성물산",
+        "code": "028260",
+        "market": "KOSPI",
+        "sector": "산업재",
+        "industry": "건설·상사"
+    },
+    {
+        "name": "한화에어로스페이스",
+        "code": "012450",
+        "market": "KOSPI",
+        "sector": "산업재",
+        "industry": "방위산업"
+    },
+    {
+        "name": "HD현대중공업",
+        "code": "329180",
+        "market": "KOSPI",
+        "sector": "산업재",
+        "industry": "조선"
+    },
+    {
+        "name": "한국전력",
+        "code": "015760",
+        "market": "KOSPI",
+        "sector": "유틸리티",
+        "industry": "전력"
+    },
+    {
+        "name": "SK텔레콤",
+        "code": "017670",
+        "market": "KOSPI",
+        "sector": "커뮤니케이션서비스",
+        "industry": "통신"
+    },
+    {
+        "name": "KT&G",
+        "code": "033780",
+        "market": "KOSPI",
+        "sector": "필수소비재",
+        "industry": "담배"
+    },
+    {
+        "name": "아모레퍼시픽",
+        "code": "090430",
+        "market": "KOSPI",
+        "sector": "필수소비재",
+        "industry": "화장품"
+    },
+    {
+        "name": "에코프로비엠",
+        "code": "247540",
+        "market": "KOSDAQ",
+        "sector": "산업재",
+        "industry": "2차전지 소재"
+    },
+    {
+        "name": "에코프로",
+        "code": "086520",
+        "market": "KOSDAQ",
+        "sector": "산업재",
+        "industry": "2차전지 소재"
+    },
+    {
+        "name": "알테오젠",
+        "code": "196170",
+        "market": "KOSDAQ",
+        "sector": "헬스케어",
+        "industry": "바이오"
+    },
+    {
+        "name": "HLB",
+        "code": "028300",
+        "market": "KOSDAQ",
+        "sector": "헬스케어",
+        "industry": "바이오"
+    },
+    {
+        "name": "리가켐바이오",
+        "code": "141080",
+        "market": "KOSDAQ",
+        "sector": "헬스케어",
+        "industry": "바이오"
+    },
+    {
+        "name": "펄어비스",
+        "code": "263750",
+        "market": "KOSDAQ",
+        "sector": "커뮤니케이션서비스",
+        "industry": "게임"
+    },
+    {
+        "name": "레인보우로보틱스",
+        "code": "277810",
+        "market": "KOSDAQ",
+        "sector": "산업재",
+        "industry": "로봇"
+    },
+    {
+        "name": "클래시스",
+        "code": "214150",
+        "market": "KOSDAQ",
+        "sector": "헬스케어",
+        "industry": "의료기기"
+    }
+]

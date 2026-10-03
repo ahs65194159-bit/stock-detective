@@ -1,0 +1,33 @@
+{
+    "title": "stocks",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "autoincrement": true,
+            "primary_key": true
+        },
+        "name": {
+            "type": "string"
+        },
+        "code": {
+            "type": "string"
+        },
+        "market": {
+            "type": "string"
+        },
+        "sector": {
+            "type": "string"
+        },
+        "industry": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name",
+        "code",
+        "market",
+        "sector",
+        "industry"
+    ]
+}
