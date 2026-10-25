@@ -80,7 +80,7 @@ async def kakao_skill(request: Request):
     utterance = user_request.get("utterance", "") if isinstance(user_request, dict) else ""
     # 비밀 이스터에그: 정확히 "//퇴원했당"을 입력했을 때만 작동
     if str(utterance or "").strip() == "//퇴원했당":
-        text = "🎉 퇴원 축하해 민아야!!\n언넝 맛난 거 먹고 놀러가장 ❤️"
+        text = "🎉 퇴원 축하해 민아야!! 입원하느라 고생했어~\n언넝 맛난 거 먹고 놀러가장 ❤️"
         return JSONResponse(content=build_skill_payload(text), media_type="application/json; charset=utf-8")
 
     keyword = _parse_query(str(utterance or ""))
