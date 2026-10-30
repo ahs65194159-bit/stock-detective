@@ -83,6 +83,15 @@ async def kakao_skill(request: Request):
         text = "🎉 퇴원 축하해 민아야!! 입원하느라 고생했어~\n언넝 맛난 거 먹고 놀러가장 ❤️"
         return JSONResponse(content=build_skill_payload(text), media_type="application/json; charset=utf-8")
 
+    # 추가 이스터에그: 정확한 명령어에만 응답
+    easter_eggs = {
+        "//뭉치": "뭉치바보",
+        "//주도주": "주도주의민족화이팅",
+    }
+    easter_egg = easter_eggs.get(str(utterance or "").strip())
+    if easter_egg is not None:
+        return JSONResponse(content=build_skill_payload(easter_egg), media_type="application/json; charset=utf-8")
+
     keyword = _parse_query(str(utterance or ""))
     try:
         text = _format(_search(keyword), keyword)
