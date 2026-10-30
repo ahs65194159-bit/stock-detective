@@ -7,14 +7,16 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, List
 import json
+import os
 
 from fastapi import APIRouter, Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
 
 router = APIRouter(prefix="/api/v1/kakao", tags=["kakao"])
 
 USAGE = "사용법: /종목명 (예: /삼성전자)\n종목코드로도 검색할 수 있습니다. (예: /005930)"
 STOCK_DATA = Path(__file__).resolve().parent.parent / "data_models" / "stocks_full.json"
+SAMGYETANG_IMAGE = Path(__file__).resolve().parent.parent / "static" / "samgyetang.png"
 
 
 def _parse_query(utterance: str) -> str:
@@ -70,6 +72,14 @@ def build_skill_payload(text: str) -> Dict[str, Any]:
     return {"version": "2.0", "template": {"outputs": [{"simpleText": {"text": safe}}]}}
 
 
+@router.get("/samgyetang.png", name="kakao_samgyetang_image")
+async def samgyetang_image():
+    if not SAMGYETANG_IMAGE.is_file():
+        from fastapi import HTTPException
+        raise HTTPException(status_code=404, detail="Image not found")
+    return FileResponse(SAMGYETANG_IMAGE, media_type="image/png")
+
+
 @router.post("/skill")
 async def kakao_skill(request: Request):
     try:
@@ -78,6 +88,15 @@ async def kakao_skill(request: Request):
         body = {}
     user_request = body.get("userRequest") if isinstance(body, dict) else {}
     utterance = user_request.get("utterance", "") if isinstance(user_request, dict) else ""
+    # 사진 이스터에그: Render 공개 주소에서 이미지를 불러옴
+    if str(utterance or "").strip() == "//삼계탕":
+        base_url = os.getenv("RENDER_EXTERNAL_URL", "").rstrip("/")
+        image_url = (base_url + "/api/v1/kakao/samgyetang.png") if base_url else str(request.url_for("kakao_samgyetang_image"))
+        payload = {"version": "2.0", "template": {"outputs": [
+            {"simpleImage": {"imageUrl": image_url, "altText": "인삼 캐릭터가 삼계탕 먹는 사진"}}
+        ]}}
+        return JSONResponse(content=payload, media_type="application/json; charset=utf-8")
+
     # 비밀 이스터에그: 정확히 "//퇴원했당"을 입력했을 때만 작동
     if str(utterance or "").strip() == "//퇴원했당":
         text = "🎉 퇴원 축하해 민아야!! 입원하느라 고생했어~\n언넝 맛난 거 먹고 놀러가장 ❤️"
